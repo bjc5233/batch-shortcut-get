@@ -166,6 +166,23 @@ if /i %1==ascii (
 
 
 
+
+::========================= 手机ftp =========================
+if /i %1==mobile (
+    if /i "%2"=="tasker" set /p"=/storage/sdcard0/Tasker"<nul|clip& goto :EOF
+    if /i "%2"=="jietu" set /p"=/storage/sdcard0/Pictures/Screenshots"<nul|clip& goto :EOF
+    if /i "%2"=="luyin" set /p"=/storage/sdcard0/Recordings"<nul|clip& goto :EOF
+    if /i "%2"=="music" set /p"=/storage/sdcard1/music"<nul|clip& goto :EOF
+    set /p"=/storage/sdcard0"<nul|clip& goto :EOF
+)
+::========================= 手机ftp =========================
+
+
+
+
+
+
+
 ::========================= Java相关 =========================
 if /i %1==classTitle (
     setlocal enabledelayedexpansion

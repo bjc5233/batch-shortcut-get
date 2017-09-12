@@ -28,6 +28,7 @@ up
 down
 block
 ascii
+mobile
 classTitle
 myuserid
 build
