@@ -1,4 +1,4 @@
-@echo off& call lib\load.bat _parseBlockNum _parseShowBlockNum2 _parseASCIIStr _getRandomNum _parseArray _parseJSON _downcase _upcase& setlocal enabledelayedexpansion
+@echo off& call load.bat _parseBlockNum _parseShowBlockNum2 _parseASCIIStr _getRandomNum _parseArray _parseJSON _downcase _upcase& setlocal enabledelayedexpansion
 ::说明
 ::  复制指定文本到剪切板
 ::  输入为空时更新key文本
@@ -9,7 +9,7 @@
 ::注意
 ::使用echo abc|clip, 会多出一个换行符, 因为echo输出会添加上换行符
 ::使用set /p"=abc"<nul可以消除换行符
-set guessKeyFile=lib\getKey.txt
+set guessKeyFile=getKey.txt
 if "%1"=="" (
     (for /f "tokens=1-4 delims== " %%i in (%~f0) do if "%%i %%j %%k"=="if /i %%1" echo %%l)>%guessKeyFile%
     exit
